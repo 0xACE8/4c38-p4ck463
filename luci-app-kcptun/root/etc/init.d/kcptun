@@ -85,7 +85,7 @@ gen_client_config_file() {
 add_iptables_rule() {
 	local port="$1"
 
-	iptables-restore --noflush <<-EOF 2>/dev/null
+	iptables-nft-restore --noflush <<-EOF 2>/dev/null
 		*nat
 		:KCPTUN -
 		-A KCPTUN -p tcp --dport $port -j ACCEPT
@@ -95,7 +95,7 @@ add_iptables_rule() {
 }
 
 clear_iptables_rule() {
-	iptables-save --counters | grep -vi "KCPTUN" | iptables-restore --counters
+	iptables-nft-save --counters | grep -vi "KCPTUN" | iptables-nft-restore --counters
 }
 
 validate_config_section() {
