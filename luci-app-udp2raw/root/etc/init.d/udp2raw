@@ -20,9 +20,9 @@ has_valid_server() {
 
 add_ipt_rule() {
 	if [ -z "$ipt_cmd" ]; then
-		command -v iptables >/dev/null 2>&1 || return 1
-		ipt_cmd='iptables'
-		[ -n "$(iptables -h 2> /dev/null | grep -e '--wait')" ] && ipt_cmd="$ipt_cmd --wait"
+		command -h iptables-nft >/dev/null 2>&1 || return 1
+		ipt_cmd='iptables-nft'
+		[ -n "$(iptables-nft -h 2> /dev/null | grep -e '--wait')" ] && ipt_cmd="$ipt_cmd --wait"
 		echo "# firewall include file" > "/var/etc/$NAME.include"
 	else
 		echo "$ipt_cmd" | grep -q -e '--wait'
@@ -32,16 +32,16 @@ add_ipt_rule() {
 }
 
 flush_ipt_rules() {
-	iptables-save -c | grep -v "${NAME}DwrW" | iptables-restore -c
+	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
 	[ -f "/var/etc/$NAME.include" ] && rm -f "/var/etc/$NAME.include"
 }
 
 export_ipt_rules() {
 	[ -f "/var/etc/$NAME.include" ] || return
 	cat <<-CAT >> "/var/etc/$NAME.include"
-	iptables-save -c | grep -v "${NAME}DwrW" | iptables-restore -c
-	iptables-restore -n <<-EOF
-	$(iptables-save -t filter | grep -E "${NAME}DwrW|^\*|^COMMIT" | sed 's/^-A /-I /')
+	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
+	iptables-nft-restore -n <<-EOF
+	$(iptables-nft-save -t filter | grep -E "${NAME}DwrW|^\*|^COMMIT" | sed 's/^-A /-I /')
 	EOF
 CAT
 }
