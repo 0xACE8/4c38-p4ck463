@@ -18,33 +18,33 @@ has_valid_server() {
 	return 1
 }
 
-add_ipt_rule() {
-	if [ -z "$ipt_cmd" ]; then
-		command -h iptables-nft >/dev/null 2>&1 || return 1
-		ipt_cmd='iptables-nft'
-		[ -n "$(iptables-nft -h 2> /dev/null | grep -e '--wait')" ] && ipt_cmd="$ipt_cmd --wait"
-		echo "# firewall include file" > "/var/etc/$NAME.include"
-	else
-		echo "$ipt_cmd" | grep -q -e '--wait'
-		[ $? -ne 0 ] && sleep 2
-	fi
+#add_ipt_rule() {
+#	if [ -z "$ipt_cmd" ]; then
+#		command -h iptables-nft >/dev/null 2>&1 || return 1
+#		ipt_cmd='iptables-nft'
+#		[ -n "$(iptables-nft -h 2> /dev/null | grep -e '--wait')" ] && ipt_cmd="$ipt_cmd --wait"
+#		echo "# firewall include file" > "/var/etc/$NAME.include"
+#	else
+#		echo "$ipt_cmd" | grep -q -e '--wait'
+#		[ $? -ne 0 ] && sleep 2
+#	fi
+#
+#}
 
-}
+#flush_ipt_rules() {
+#	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
+#	[ -f "/var/etc/$NAME.include" ] && rm -f "/var/etc/$NAME.include"
+#}
 
-flush_ipt_rules() {
-	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
-	[ -f "/var/etc/$NAME.include" ] && rm -f "/var/etc/$NAME.include"
-}
-
-export_ipt_rules() {
-	[ -f "/var/etc/$NAME.include" ] || return
-	cat <<-CAT >> "/var/etc/$NAME.include"
-	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
-	iptables-nft-restore -n <<-EOF
-	$(iptables-nft-save -t filter | grep -E "${NAME}DwrW|^\*|^COMMIT" | sed 's/^-A /-I /')
-	EOF
-CAT
-}
+#export_ipt_rules() {
+#	[ -f "/var/etc/$NAME.include" ] || return
+#	cat <<-CAT >> "/var/etc/$NAME.include"
+#	iptables-nft-save -c | grep -v "${NAME}DwrW" | iptables-nft-restore -c
+#	iptables-nft-restore -n <<-EOF
+#	$(iptables-nft-save -t filter | grep -E "${NAME}DwrW|^\*|^COMMIT" | sed 's/^-A /-I /')
+#	EOF
+#CAT
+#}
 
 create_config() {
 	local config_file="$1"
@@ -126,9 +126,9 @@ start_instance() {
 	local config_file="/var/etc/${NAME}.${server}.conf"
 	create_config "$config_file" || return 1
 
-	if [ $auto_rule -eq 1 -a $keep_rule -ne 1 ]; then
-		add_ipt_rule || { _log "err" "added iptables rule failed."; return 1; }
-	fi
+#	if [ $auto_rule -eq 1 -a $keep_rule -ne 1 ]; then
+#		add_ipt_rule || { _log "err" "added iptables rule failed."; return 1; }
+#	fi
 
 	procd_open_instance
 	procd_set_param command /usr/bin/udp2raw
@@ -150,13 +150,13 @@ start_service() {
 		return 1
 	fi
 	has_valid_server $server || return 1
-	flush_ipt_rules
+#	flush_ipt_rules
 	for srv in $server; do
 		start_instance $srv
 	done
-	export_ipt_rules
+#	export_ipt_rules
 }
 
-stop_service() {
-	flush_ipt_rules
-}
+#stop_service() {
+#	flush_ipt_rules
+#}
