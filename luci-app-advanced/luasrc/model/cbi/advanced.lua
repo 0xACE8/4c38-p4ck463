@@ -183,112 +183,112 @@ end
 end
 end
 
-if nixio.fs.access("/etc/config/ddns")then
-s:tab("ddnsconf",translate("DDNS"),translate("本页是配置/etc/config/ddns包含动态域名设置文档内容。应用保存后自动重启生效"))
-conf=s:taboption("ddnsconf",Value,"ddnsconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
+if nixio.fs.access("/etc/config/udp2raw")then
+s:tab("udp2rawconf",translate("UDP2RAW"),translate("本页是配置/etc/config/udp2raw包含动态域名设置文档内容。应用保存后自动重启生效"))
+conf=s:taboption("udp2rawconf",Value,"udp2rawconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
 conf.wrap="off"
 conf.cfgvalue=function(t,t)
-return e.readfile("/etc/config/ddns")or""
+return e.readfile("/etc/config/udp2raw")or""
 end
 conf.write=function(a,a,t)
 if t then
 t=t:gsub("\r\n?","\n")
-e.writefile("/tmp/ddns",t)
-if(luci.sys.call("cmp -s /tmp/ddns /etc/config/ddns")==1)then
-e.writefile("/etc/config/ddns",t)
-luci.sys.call("/etc/init.d/ddns restart >/dev/null")
+e.writefile("/tmp/udp2raw",t)
+if(luci.sys.call("cmp -s /tmp/udp2raw /etc/config/udp2raw")==1)then
+e.writefile("/etc/config/udp2raw",t)
+luci.sys.call("/etc/init.d/udp2raw restart >/dev/null")
 end
-e.remove("/tmp/ddns")
+e.remove("/tmp/udp2raw")
 end
 end
 end
 
-if nixio.fs.access("/etc/config/parentcontrol")then
-s:tab("parentcontrolconf",translate("家长控制"),translate("本页是配置/etc/config/parentcontrol包含家长控制配置文档内容。应用保存后自动重启生效"))
-conf=s:taboption("parentcontrolconf",Value,"parentcontrolconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
+if nixio.fs.access("/etc/config/kcptun")then
+s:tab("kcptunconf",translate("KCPTUN"),translate("本页是配置/etc/config/kcptun包含家长控制配置文档内容。应用保存后自动重启生效"))
+conf=s:taboption("kcptunconf",Value,"kcptunconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
 conf.wrap="off"
 conf.cfgvalue=function(t,t)
-return e.readfile("/etc/config/parentcontrol")or""
+return e.readfile("/etc/config/kcptun")or""
 end
 conf.write=function(a,a,t)
 if t then
 t=t:gsub("\r\n?","\n")
-e.writefile("/tmp/parentcontrol",t)
-if(luci.sys.call("cmp -s /tmp/parentcontrol /etc/config/parentcontrol")==1)then
-e.writefile("/etc/config/parentcontrol",t)
-luci.sys.call("/etc/init.d/parentcontrol restart >/dev/null")
+e.writefile("/tmp/kcptun",t)
+if(luci.sys.call("cmp -s /tmp/kcptun /etc/config/kcptun")==1)then
+e.writefile("/etc/config/kcptun",t)
+luci.sys.call("/etc/init.d/kcptun restart >/dev/null")
 end
-e.remove("/tmp/parentcontrol")
+e.remove("/tmp/kcptun")
 end
 end
 end
 
-if nixio.fs.access("/etc/config/autotimeset")then
-s:tab("autotimesetconf",translate("定时设置"),translate("本页是配置/etc/config/autotimeset包含定时设置任务配置文档内容。应用保存后自动重启生效"))
-conf=s:taboption("autotimesetconf",Value,"autotimesetconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
+if nixio.fs.access("/etc/config/udpspeeder")then
+s:tab("udpspeederconf",translate("UDPSPEEDER"),translate("本页是配置/etc/config/udpspeeder包含定时设置任务配置文档内容。应用保存后自动重启生效"))
+conf=s:taboption("udpspeederconf",Value,"udpspeederconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
 conf.wrap="off"
 conf.cfgvalue=function(t,t)
-return e.readfile("/etc/config/autotimeset")or""
+return e.readfile("/etc/config/udpspeeder")or""
 end
 conf.write=function(a,a,t)
 if t then
 t=t:gsub("\r\n?","\n")
-e.writefile("/tmp/autotimeset",t)
-if(luci.sys.call("cmp -s /tmp/autotimeset /etc/config/autotimeset")==1)then
-e.writefile("/etc/config/autotimeset",t)
-luci.sys.call("/etc/init.d/autotimeset restart >/dev/null")
+e.writefile("/tmp/udpspeeder",t)
+if(luci.sys.call("cmp -s /tmp/udpspeeder /etc/config/udpspeeder")==1)then
+e.writefile("/etc/config/udpspeeder",t)
+luci.sys.call("/etc/init.d/udpspeeder restart >/dev/null")
 end
-e.remove("/tmp/autotimeset")
+e.remove("/tmp/udpspeeder")
 end
 end
 end
 
-if nixio.fs.access("/etc/config/wolplus")then
-s:tab("wolplusconf",translate("网络唤醒"),translate("本页是配置/etc/config/wolplus包含网络唤醒配置文档内容。应用保存后自动重启生效"))
-conf=s:taboption("wolplusconf",Value,"wolplusconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
+if nixio.fs.access("/etc/config/passwall")then
+s:tab("passwallconf",translate("PASSWALL 节点"),translate("本页是配置/etc/config/passwall包含网络唤醒配置文档内容。应用保存后自动重启生效"))
+conf=s:taboption("passwallconf",Value,"passwallconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
 conf.wrap="off"
 conf.cfgvalue=function(t,t)
-return e.readfile("/etc/config/wolplus")or""
+return e.readfile("/etc/config/passwall")or""
 end
 conf.write=function(a,a,t)
 if t then
 t=t:gsub("\r\n?","\n")
-e.writefile("/tmp/wolplus",t)
-if(luci.sys.call("cmp -s /tmp/wolplus /etc/config/wolplus")==1)then
-e.writefile("/etc/config/wolplus",t)
-luci.sys.call("/etc/init.d/wolplus restart >/dev/null")
+e.writefile("/tmp/passwall",t)
+if(luci.sys.call("cmp -s /tmp/passwall /etc/config/passwall")==1)then
+e.writefile("/etc/config/passwall",t)
+luci.sys.call("/etc/init.d/passwall restart >/dev/null")
 end
-e.remove("/tmp/wolplus")
+e.remove("/tmp/passwall")
 end
 end
 end
 
-if nixio.fs.access("/etc/config/smartdns")then
-s:tab("smartdnsconf",translate("SMARTDNS"),translate("本页是配置/etc/config/smartdns包含smartdns配置文档内容。应用保存后自动重启生效"))
-conf=s:taboption("smartdnsconf",Value,"smartdnsconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
+if nixio.fs.access("/etc/config/passwall2")then
+s:tab("passwall2conf",translate("PASSWALL2 节点"),translate("本页是配置/etc/config/passwall2包含passwall2配置文档内容。应用保存后自动重启生效"))
+conf=s:taboption("passwall2conf",Value,"passwall2conf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
 conf.wrap="off"
 conf.cfgvalue=function(t,t)
-return e.readfile("/etc/config/smartdns")or""
+return e.readfile("/etc/config/passwall2")or""
 end
 conf.write=function(a,a,t)
 if t then
 t=t:gsub("\r\n?","\n")
-e.writefile("/tmp/smartdns",t)
-if(luci.sys.call("cmp -s /tmp/smartdns /etc/config/smartdns")==1)then
-e.writefile("/etc/config/smartdns",t)
-luci.sys.call("/etc/init.d/smartdns restart >/dev/null")
+e.writefile("/tmp/passwall2",t)
+if(luci.sys.call("cmp -s /tmp/passwall2 /etc/config/passwall2")==1)then
+e.writefile("/etc/config/passwall2",t)
+luci.sys.call("/etc/init.d/passwall2 restart >/dev/null")
 end
-e.remove("/tmp/smartdns")
+e.remove("/tmp/passwall2")
 end
 end
 end
