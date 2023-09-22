@@ -184,7 +184,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/udp2raw")then
-s:tab("udp2rawconf",translate("UDP2RAW"),translate("本页是配置/etc/config/udp2raw包含动态域名设置文档内容。应用保存后自动重启生效"))
+s:tab("udp2rawconf",translate("udp2raw"),translate("本页是配置/etc/config/udp2raw包含动态域名设置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("udp2rawconf",Value,"udp2rawconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
@@ -206,7 +206,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/kcptun")then
-s:tab("kcptunconf",translate("KCPTUN"),translate("本页是配置/etc/config/kcptun包含家长控制配置文档内容。应用保存后自动重启生效"))
+s:tab("kcptunconf",translate("kcptun"),translate("本页是配置/etc/config/kcptun包含家长控制配置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("kcptunconf",Value,"kcptunconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
@@ -228,7 +228,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/udpspeeder")then
-s:tab("udpspeederconf",translate("UDPSPEEDER"),translate("本页是配置/etc/config/udpspeeder包含定时设置任务配置文档内容。应用保存后自动重启生效"))
+s:tab("udpspeederconf",translate("udpspeeder"),translate("本页是配置/etc/config/udpspeeder包含定时设置任务配置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("udpspeederconf",Value,"udpspeederconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
@@ -250,7 +250,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/passwall")then
-s:tab("passwallconf",translate("PASSWALL 节点"),translate("本页是配置/etc/config/passwall包含网络唤醒配置文档内容。应用保存后自动重启生效"))
+s:tab("passwallconf",translate("passwall"),translate("本页是配置/etc/config/passwall包含网络唤醒配置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("passwallconf",Value,"passwallconf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
@@ -272,7 +272,7 @@ end
 end
 
 if nixio.fs.access("/etc/config/passwall2")then
-s:tab("passwall2conf",translate("PASSWALL2 节点"),translate("本页是配置/etc/config/passwall2包含passwall2配置文档内容。应用保存后自动重启生效"))
+s:tab("passwall2conf",translate("passwall2"),translate("本页是配置/etc/config/passwall2包含passwall2配置文档内容。应用保存后自动重启生效"))
 conf=s:taboption("passwall2conf",Value,"passwall2conf",nil,translate("开头的数字符号（＃）或分号的每一行（;）被视为注释；删除（;）启用指定选项。"))
 conf.template="cbi/tvalue"
 conf.rows=20
