@@ -105,7 +105,7 @@
 }
 
 @font-face {
-  font-family: 'beta';
+  font-family: 'design';
   src: url('');
   src: url('?#iefix') format('embedded-opentype'),
   url('../fonts/iconfont-Regular.woff2') format('woff2'),
@@ -3786,7 +3786,7 @@ td.cbi-button, .cbi-button-apply,
     -webkit-backdrop-filter: blur(20px);
 }
 
-[data-tab-title="IPv4 防火墙"] {
+/* [data-tab-title="IPv4 防火墙"] {
     font-family: inherit;
     font-weight: 400;
     font-style: normal;
@@ -3864,7 +3864,7 @@ td.cbi-button, .cbi-button-apply,
 [data-tab-title="IPv4 规则"],
 [data-tab-title="IPv6 规则"] {
     margin-top: -5.36rem;
-}
+} */
 
 footer.mobile-hide {
     display: none;
