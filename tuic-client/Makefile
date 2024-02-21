@@ -9,7 +9,7 @@ PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/EAimTY/tuic/tar.gz/tuic-client-$(PKG_VERSION)?
+PKG_SOURCE_URL:=https://codeload.github.com/etjec4/tuic/tar.gz/tuic-client-$(PKG_VERSION)?
 PKG_HASH:=64d81f3d5c79d9d69229e927c3f842849885f547020d897f9624d185819e5661
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/$(PKG_NAME)
 
