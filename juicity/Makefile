@@ -23,12 +23,12 @@ PKG_USE_MIPS16:=0
 PKG_BUILD_FLAGS:=no-mips16
 
 GO_PKG:=github.com/juicity/juicity
-GO_PKG_BUILD_PKG:=$(GO_PKG)/app
+GO_PKG_BUILD_PKG:=$(GO_PKG)/
 GO_PKG_LDFLAGS_X = \
-	$(GO_PKG)/app/cmd.appVersion=v$(PKG_VERSION) \
-	$(GO_PKG)/app/cmd.appType=release \
-	$(GO_PKG)/app/cmd.appPlatform=$(GO_OS) \
-	$(GO_PKG)/app/cmd.appArch=$(GO_ARCH)
+	$(GO_PKG)/cmd.appVersion=v$(PKG_VERSION) \
+	$(GO_PKG)/cmd.appType=release \
+	$(GO_PKG)/cmd.appPlatform=$(GO_OS) \
+	$(GO_PKG)/cmd.appArch=$(GO_ARCH)
 
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
