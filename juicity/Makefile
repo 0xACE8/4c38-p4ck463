@@ -50,7 +50,7 @@ define Package/juicity/install
 	$(call GoPackage/Package/Install/Bin,$(PKG_INSTALL_DIR))
 
 	$(INSTALL_DIR) $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/ $(1)/usr/bin/juicity
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin $(1)/usr/bin/juicity
 endef
 
 $(eval $(call GoBinPackage,juicity))
