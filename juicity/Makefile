@@ -23,7 +23,7 @@ PKG_USE_MIPS16:=0
 PKG_BUILD_FLAGS:=no-mips16
 
 GO_PKG:=github.com/juicity/juicity
-GO_PKG_BUILD_PKG:=$(GO_PKG)
+GO_PKG_BUILD_PKG:=$(GO_PKG)/cmd
 GO_PKG_LDFLAGS_X = \
 	$(GO_PKG)/cmd.appVersion=v$(PKG_VERSION) \
 	$(GO_PKG)/cmd.appType=release \
