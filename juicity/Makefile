@@ -29,6 +29,7 @@ GO_PKG_LDFLAGS_X = \
 	$(GO_PKG)/common/consts.MaxMatchSetLen_=64
 
 include $(INCLUDE_DIR)/package.mk
+include $(INCLUDE_DIR)/bpf.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
 define Package/juicity
