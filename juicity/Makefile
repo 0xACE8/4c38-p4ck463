@@ -24,9 +24,10 @@ PKG_BUILD_FLAGS:=no-mips16
 
 GO_PKG:=github.com/juicity/juicity
 GO_PKG_BUILD_PKG:=$(GO_PKG)
+GO_PKG_LDFLAGS:=-trimpath -modcacherw
 GO_PKG_LDFLAGS_X = \
-	$(GO_PKG)/cmd.Version=$(PKG_VERSION) \
-	$(GO_PKG)/common/consts.MaxMatchSetLen_=64
+
+GO_PKG_TARGET_VARS:=$(filter-out CGO_ENABLED=%,$(GO_PKG_TARGET_VARS)) CGO_ENABLED=0
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/bpf.mk
