@@ -16,8 +16,9 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-#git clone --depth 1 https://github.com/kenzo78/my-packages && mvdir my-packages
-git clone --depth 1 https://github.com/peter-tank/luci-app-dnscrypt-proxy2
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udp2raw && mvdir 0p3nwrt-udp2raw
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udpspeeder && mvdir 0p3nwrt-udpspeeder
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kcptun
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
