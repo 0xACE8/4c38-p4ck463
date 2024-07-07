@@ -1,12 +1,5 @@
 #!/bin/sh
 
-uci -q batch <<-EOF >/dev/null
-    delete ucitrack.@udpspeeder[-1]
-    add ucitrack udpspeeder
-    set ucitrack.@udpspeeder[-1].init=udpspeeder
-    commit ucitrack
-EOF
-
 general=$(uci -q get udpspeeder.@general[-1])
 
 if [ -z "$general" ]; then
