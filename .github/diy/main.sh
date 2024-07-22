@@ -23,8 +23,8 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
-#git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/luci-app-ddns-go ./; rm -rf ddnsgo
-#git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
+git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/luci-app-ddns-go ./; rm -rf ddnsgo
+git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
 git clone --depth 1 https://github.com/kenzok78/luci-theme-argone
 git clone --depth 1 https://github.com/kenzok78/luci-app-argone-config
 #git clone --depth 1 https://github.com/gngpp/luci-theme-design
@@ -33,6 +33,8 @@ git clone --depth 1 https://github.com/sbwml/luci-app-mosdns openwrt-mos && mv -
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
 git clone --depth 1 https://github.com/muink/luci-app-homeproxy
+git clone --depth 1 https://github.com/Zxilly/UA2F openwrt-ua2f && mv -n openwrt-ua2f/openwrt ./ && mv openwrt ua2f; rm -rf openwrt-ua2f
+git clone --depth 1 https://github.com/lucikap/luci-app-ua2f luciua2f && mv -n luciua2f/luci-app-ua2f  ./; rm -rf luciua2f
 
 #sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
