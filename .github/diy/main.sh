@@ -22,6 +22,7 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kc
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt-tailscale
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
+git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/*/ ./; rm -rf ddnsgo
 git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
