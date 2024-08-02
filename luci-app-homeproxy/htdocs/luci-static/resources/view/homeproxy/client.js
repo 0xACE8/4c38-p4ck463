@@ -6,6 +6,7 @@
 
 'use strict';
 'require form';
+'require fs';
 'require network';
 'require poll';
 'require rpc';
@@ -400,6 +401,13 @@ return view.extend({
 		}
 		so.default = 'nil';
 		so.rmempty = false;
+
+		so = ss.option(form.Button, '_reload_client', _('Quick Reload'));
+		so.inputtitle = _('Reload');
+		so.inputstyle = 'apply';
+		so.onclick = function() {
+			return fs.exec('/etc/init.d/homeproxy', ['reload']);
+		};
 		/* Routing settings end */
 
 		/* Routing nodes start */
@@ -495,11 +503,11 @@ return view.extend({
 		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, prefmt);
 
-		ss.tab('field_other', _('Other Fields'));
-		ss.tab('field_host', _('Host Fields'));
-		ss.tab('field_port', _('Port Fields'));
-		ss.tab('field_source_ip', _('SRC-IP Fields'));
-		ss.tab('field_source_port', _('SRC-Port Fields'));
+		ss.tab('field_other', _('Other fields'));
+		ss.tab('field_host', _('Host fields'));
+		ss.tab('field_port', _('Port fields'));
+		ss.tab('field_source_ip', _('SRC-IP fields'));
+		ss.tab('field_source_port', _('SRC-Port fields'));
 
 		so = ss.taboption('field_other', form.Value, 'label', _('Label'));
 		so.load = L.bind(hp.loadDefaultLabel, this, data[0]);
@@ -839,11 +847,11 @@ return view.extend({
 		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, prefmt);
 
-		ss.tab('field_other', _('Other Fields'));
-		ss.tab('field_host', _('Host Fields'));
-		ss.tab('field_port', _('Port Fields'));
-		ss.tab('field_source_ip', _('SRC-IP Fields'));
-		ss.tab('field_source_port', _('SRC-Port Fields'));
+		ss.tab('field_other', _('Other fields'));
+		ss.tab('field_host', _('Host fields'));
+		ss.tab('field_port', _('Port fields'));
+		ss.tab('field_source_ip', _('SRC-IP fields'));
+		ss.tab('field_source_port', _('SRC-Port fields'));
 
 		so = ss.taboption('field_other', form.Value, 'label', _('Label'));
 		so.load = L.bind(hp.loadDefaultLabel, this, data[0]);
