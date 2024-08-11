@@ -418,7 +418,7 @@ return view.extend({
 		ss.nodescriptions = true;
 		ss.modaltitle = L.bind(hp.loadModalTitle, this, _('Routing node'), _('Add a routing node'), data[0]);
 		ss.sectiontitle = L.bind(hp.loadDefaultLabel, this, data[0]);
-		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, {});
+		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, {}, true);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, {});
 
 		so = ss.option(form.Value, 'label', _('Label'));
@@ -496,7 +496,7 @@ return view.extend({
 		ss.nodescriptions = true;
 		ss.modaltitle = L.bind(hp.loadModalTitle, this, _('Routing rule'), _('Add a routing rule'), data[0]);
 		ss.sectiontitle = L.bind(hp.loadDefaultLabel, this, data[0]);
-		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt);
+		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt, false);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, prefmt);
 
 		ss.tab('field_other', _('Other fields'));
@@ -572,7 +572,6 @@ return view.extend({
 		so = ss.taboption('field_source_ip', form.Flag, 'source_ip_is_private', _('Private source IP'),
 			_('Match private source IP.'));
 		so.default = so.disabled;
-		so.rmempty = false;
 		so.modalonly = true;
 
 		so = ss.taboption('field_host', form.DynamicList, 'ip_cidr', _('IP CIDR'),
@@ -583,7 +582,6 @@ return view.extend({
 		so = ss.taboption('field_host', form.Flag, 'ip_is_private', _('Private IP'),
 			_('Match private IP.'));
 		so.default = so.disabled;
-		so.rmempty = false;
 		so.modalonly = true;
 
 		so = ss.taboption('field_source_port', form.DynamicList, 'source_port', _('Source port'),
@@ -645,7 +643,6 @@ return view.extend({
 		so = ss.taboption('field_other', form.Flag, 'rule_set_ipcidr_match_source', _('Match source IP via rule set'),
 			_('Make IP CIDR in rule set used to match the source IP.'));
 		so.default = so.disabled;
-		so.rmempty = false;
 		so.modalonly = true;
 
 		so = ss.taboption('field_other', form.Flag, 'invert', _('Invert'),
@@ -743,7 +740,7 @@ return view.extend({
 		ss.nodescriptions = true;
 		ss.modaltitle = L.bind(hp.loadModalTitle, this, _('DNS server'), _('Add a DNS server'), data[0]);
 		ss.sectiontitle = L.bind(hp.loadDefaultLabel, this, data[0]);
-		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt);
+		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt, true);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, prefmt);
 
 		so = ss.option(form.Value, 'label', _('Label'));
@@ -840,7 +837,7 @@ return view.extend({
 		ss.nodescriptions = true;
 		ss.modaltitle = L.bind(hp.loadModalTitle, this, _('DNS rule'), _('Add a DNS rule'), data[0]);
 		ss.sectiontitle = L.bind(hp.loadDefaultLabel, this, data[0]);
-		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt);
+		ss.renderSectionAdd = L.bind(hp.renderSectionAdd, this, ss, prefmt, false);
 		ss.handleAdd = L.bind(hp.handleAdd, this, ss, prefmt);
 
 		ss.tab('field_other', _('Other fields'));
