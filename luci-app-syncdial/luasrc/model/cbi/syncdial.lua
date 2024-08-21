@@ -1,6 +1,6 @@
 local e=require"nixio.fs"
 require("luci.tools.webadmin")
-local e="mwan3 status | grep -c \"is online and tracking is active\""
+local e="mwan3 status | grep -c \"is online\""
 local e=io.popen(e,"r")
 local t=e:read("*a")
 e:close()
