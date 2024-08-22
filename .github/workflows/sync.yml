@@ -61,6 +61,9 @@ jobs:
         if [ -e $GITHUB_WORKSPACE/README.md ]; then
           cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         fi
+        if [ -e $GITHUB_WORKSPACE/luci-app-syncdial ]; then
+          cp -r $GITHUB_WORKSPACEluci-app-syncdial $GITHUB_WORKSPACE/${{matrix.target}}
+        fi        
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         if git status --porcelain | grep .; then
           git add .
