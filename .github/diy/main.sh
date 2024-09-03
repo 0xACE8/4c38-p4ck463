@@ -40,6 +40,8 @@ git clone --depth 1 https://github.com/lucikap/luci-app-ua2f luciua2f && mv -n l
 #git clone --depth 1 https://github.com/rufengsuixing/luci-app-syncdial && sed -i 's/is online and tracking is active/is online/g' luci-app-syncdial/luasrc/model/cbi/syncdial.lua
 git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
 git clone --depth 1 https://github.com/firkerword/openwrt-wrtbwmon wrtbwmon1 && mv -n wrtbwmon1/wrtbwmon  ./; rm -rf wrtbwmon1
+git clone --depth 1 https://github.com/awe1p/stun
+git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 #sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
