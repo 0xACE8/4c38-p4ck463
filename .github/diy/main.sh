@@ -21,6 +21,9 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udpspeeder && mvdir 0p3nwr
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kcptun
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt-tailscale
 #git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan && mvdir 0p3nwrt-syncmwan
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-natter && mvdir 0p3nwrt-natter
+git clone --depth 1 branch=v2 https://github.com/0xACE8/0p3nwrt-natter && mvdir 0p3nwrt-natter
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyfecvpn  && mvdir 0p3nwrt-tinyfecvpn
 
 # other
 #git clone --depth 1 https://github.com/rufengsuixing/luci-app-syncdial && sed -i 's/is online and tracking is active/is online/g' luci-app-syncdial/luasrc/model/cbi/syncdial.lua
