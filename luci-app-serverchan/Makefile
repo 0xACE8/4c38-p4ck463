@@ -1,14 +1,22 @@
-#
-#-- Copyright (C) 2018 dz <dingzhong110@gmail.com>
-#
-# This is free software, licensed under the Apache License, Version 2.0 .
-#
-
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI Support for serverchan
-LUCI_DEPENDS:=
-PKG_VERSION:=1.8
+PKG_NAME:=luci-app-serverchan
+PKG_VERSION:=2.01.3
+PKG_RELEASE:=9
+
+PKG_MAINTAINER:=tty228
+
+LUCI_TITLE:=LuCI support for serverchan
+LUCI_PKGARCH:=all
+LUCI_DEPENDS:=+iputils-arping +curl +jq
+
+define Package/$(PKG_NAME)/conffiles
+/etc/config/serverchan
+/usr/bin/serverchan/api/diy.json
+/usr/bin/serverchan/api/logo.jpg
+/usr/bin/serverchan/api/ipv4.list
+/usr/bin/serverchan/api/ipv6.list
+endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
