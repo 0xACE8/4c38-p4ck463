@@ -38,7 +38,7 @@ git clone --depth 1 https://github.com/kenzok78/luci-app-argone-config
 
 # dns
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns openwrt-mos && mv -n openwrt-mos/{*mosdns,v2dat} ./; rm -rf openwrt-mos
-#git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/*/ ./; rm -rf ddnsgo
+git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/*/ ./; rm -rf ddnsgo
 
 # fuckwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
@@ -53,16 +53,16 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall passwall1 && m
 #git clone --depth 1 https://github.com/gaoyaxuan/luci-app-pushbot
 #git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
 #git clone --depth 1 https://github.com/firkerword/openwrt-wrtbwmon wrtbwmon1 && mv -n wrtbwmon1/wrtbwmon  ./; rm -rf wrtbwmon1
-git clone --depth 1 https://github.com/schen39/luci-app-serverchan
+git clone --depth 1 https://github.com/catcat0921/OpenWRT_ipk serverchan1 && mv -n serverchan1/luci-app-serverchan  ./; rm -rf serverchan1
 
 # network
-git clone --depth 1 https://github.com/gdy666/luci-app-lucky lucky1 && mv -n lucky1/*lucky ./; rm -rf lucky1
+#git clone --depth 1 https://github.com/gdy666/luci-app-lucky lucky1 && mv -n lucky1/*lucky ./; rm -rf lucky1
 git clone --depth 1 https://github.com/awe1p/stun
 #git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 #sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 #sed -i 's/\(+luci-compat\)/\1 +luci-theme-design/' luci-app-design-config/Makefile
-sed -i 's/\(+luci-compat\)/\1 +luci-theme-argone/' luci-app-argone-config/Makefile
+#sed -i 's/\(+luci-compat\)/\1 +luci-theme-argone/' luci-app-argone-config/Makefile
 
 exit 0
