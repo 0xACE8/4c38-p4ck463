@@ -1,0 +1,18 @@
+#!/bin/sh
+
+general=$(uci -q get udpspeeder.@general[-1])
+
+if [ -z "$general" ]; then
+	uci -q add udpspeeder general
+fi
+
+if [ "$general" != "general" ]; then
+	uci -q batch <<-EOF > /dev/null
+		rename udpspeeder.@general[-1]="general"
+		set udpspeeder.@general[-1].server="nil"
+		commit udpspeeder
+	EOF
+fi
+
+rm -rf /tmp/luci-indexcache /tmp/luci-modulecache
+exit 0
