@@ -12,7 +12,7 @@ function index()
 	end
 
 	entry({"admin", "services", "kcptun"},
-		firstchild(), _("Kcptun Client")).dependent = false
+		firstchild(), _("Kcptun Client"), 88).dependent = false
 
 	entry({"admin", "services", "kcptun", "settings"},
 		cbi("kcptun/settings"), _("Settings"), 1)

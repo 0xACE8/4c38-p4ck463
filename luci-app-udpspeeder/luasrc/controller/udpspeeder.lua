@@ -2,7 +2,7 @@ module("luci.controller.udpspeeder", package.seeall)
 
 function index()
 	if nixio.fs.access("/etc/config/udpspeeder") then
-        local page = entry({"admin", "services", "udpspeeder"}, firstchild(), _("udpspeeder-tunnel"))
+        local page = entry({"admin", "services", "udpspeeder"}, firstchild(), _("udpspeeder-tunnel"), 89)
 		page.dependent = false
 		page.acl_depends = { "luci-app-udpspeeder" }
         entry({"admin", "services", "udpspeeder", "general"}, cbi("udpspeeder/general"), _("Settings"), 1)

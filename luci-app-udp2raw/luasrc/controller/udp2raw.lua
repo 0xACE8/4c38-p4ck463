@@ -6,7 +6,7 @@ function index()
 	end
 
 	local page = entry({"admin", "services", "udp2raw"},
-		firstchild(), _("udp2raw-tunnel"))
+		firstchild(), _("udp2raw-tunnel"), 87)
 	page.dependent = false
 	page.acl_depends = { "luci-app-udp2raw" }
 
