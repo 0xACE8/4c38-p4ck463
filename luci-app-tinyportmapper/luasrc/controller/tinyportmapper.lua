@@ -27,6 +27,6 @@ end
 function action_status()
 	luci.http.prepare_content("application/json")
 	luci.http.write_json({
-		running = is_running("tinyportmapper")
+		running = is_running("tinymapper")
 	})
 end

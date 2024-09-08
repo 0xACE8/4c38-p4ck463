@@ -25,7 +25,7 @@ include $(TOPDIR)/feeds/luci/luci.mk
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
 chmod 755 "$${IPKG_INSTROOT}/etc/init.d/tinyportmapper" >/dev/null 2>&1
-ln -sf "../init.d/udp2raw" \
+ln -sf "../init.d/tinyportmapper" \
 	"$${IPKG_INSTROOT}/etc/rc.d/S88tinyportmapper" >/dev/null 2>&1
 exit 0
 endef

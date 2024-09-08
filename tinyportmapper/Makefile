@@ -45,7 +45,7 @@ endef
 
 define Package/tinyPortMapper/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tinymapper_cross $(1)/usr/bin/tinyportmapper
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/tinymapper_cross $(1)/usr/bin/tinymapper
 endef
 
 $(eval $(call BuildPackage,tinyPortMapper))
