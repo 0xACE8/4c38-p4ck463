@@ -1,9 +1,6 @@
-local dsp = require "luci.dispatcher"
-local http = require "luci.http"
-
 local m, s, o
 
-m = Map("tinyportmapper", "%s - %s" %{translate("tinyportmapper"), translate("Servers Manage")})
+m = Map("tinyportmapper", "%s - %s" %{translate("tinyPortMapper"), translate("Servers Manage")})
 
 s = m:section(TypedSection, "servers")
 s.anonymous = true

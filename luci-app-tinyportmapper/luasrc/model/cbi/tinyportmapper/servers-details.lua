@@ -1,6 +1,4 @@
-local dsp = require "luci.dispatcher"
 local m, s, o
-
 local sid = arg[1]
 
 

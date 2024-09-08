@@ -1,4 +1,4 @@
-msgid ""Sense, 3 years ago: • Initial commit
+msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Edit Server"

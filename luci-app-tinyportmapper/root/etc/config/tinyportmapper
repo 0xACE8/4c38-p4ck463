@@ -1,6 +1,5 @@
 config general 'general'
 	list server 'nil'
-	option client_file '/usr/bin/tinymapper'
 	option daemon_user 'root'
 	option log '1'
 
