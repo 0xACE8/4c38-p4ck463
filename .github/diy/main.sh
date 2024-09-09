@@ -20,14 +20,14 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udp2raw && mvdir 0p3nwrt-u
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udpspeeder && mvdir 0p3nwrt-udpspeeder
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kcptun
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt-tailscale
-#git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan && mvdir 0p3nwrt-syncmwan
+git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan && mvdir 0p3nwrt-syncmwan sync && mv -n sync/luci-app-syncdial ./; rm -rf sync
 git clone --depth 1 branch=v2 https://github.com/0xACE8/0p3nwrt-natter && mvdir 0p3nwrt-natter
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyfecvpn && mvdir 0p3nwrt-tinyfecvpn
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p3nwrt-tinyportmapper
 
 # syncdial & mwan3
 #git clone --depth 1 https://github.com/kiddin9/openwrt-packages kid && mv -n kid/luci-app-syncdial ./; rm -rf kid
-git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/applications/luci-app-mwan3 ./; rm -rf xwrt
+#git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/applications/luci-app-mwan3 ./; rm -rf xwrt
 
 # other
 #git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
@@ -37,8 +37,8 @@ git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/application
 # theme
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-git clone --depth 1 https://github.com/kenzok78/luci-theme-argone
-git clone --depth 1 https://github.com/kenzok78/luci-app-argone-config
+#git clone --depth 1 https://github.com/kenzok78/luci-theme-argone
+#git clone --depth 1 https://github.com/kenzok78/luci-app-argone-config
 #git clone --depth 1 https://github.com/gngpp/luci-theme-design
 #git clone --depth 1 https://github.com/gngpp/luci-app-design-config
 
