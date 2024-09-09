@@ -36,7 +36,7 @@ return view.extend({
 
 		o = s.option(form.ListValue, 'last_resort', _('Last resort'),
 			_('When all policy members are offline use this behavior for matched traffic'));
-		o.default = 'unreachable';
+		o.default = 'default';
 		o.value('unreachable', _('unreachable (reject)'));
 		o.value('blackhole', _('blackhole (drop)'));
 		o.value('default', _('default (use main routing table)'));
