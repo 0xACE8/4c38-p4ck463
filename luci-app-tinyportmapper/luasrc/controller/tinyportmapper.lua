@@ -6,7 +6,7 @@ function index()
 	end
 
 	local page = entry({"admin", "services", "tinyportmapper"},
-		firstchild(), _("tinyportmapper-tunnel"), 86)
+		firstchild(), _("tinyportmapper-tunnel"), -1)
 	page.dependent = false
 	page.acl_depends = { "luci-app-tinyportmapper" }
 

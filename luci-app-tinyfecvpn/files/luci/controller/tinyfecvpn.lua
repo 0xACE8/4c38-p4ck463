@@ -13,7 +13,7 @@ function index()
 
    entry({"admin", "services", "tinyfecvpn"},
       firstchild(),
-      _("tinyFecVPN")).dependent = false
+      _("tinyFecVPN"), -1).dependent = false
 
    entry({"admin", "services", "tinyfecvpn", "settings"},
       cbi("tinyfecvpn/settings"), _("Settings"), 1)
