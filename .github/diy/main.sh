@@ -33,7 +33,9 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p
 # other
 #git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
-#git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
+git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
+git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp
+#git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced && mvdir luci-app-advanced
 
 # theme
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
