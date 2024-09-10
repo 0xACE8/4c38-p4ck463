@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for tinyportmapper
 LUCI_DESCRIPTION:=LuCI Support for tinyportmapper.
-LUCI_DEPENDS:=+tinyportmapper
+LUCI_DEPENDS:=+tinyPortMapper
 LUCI_PKGARCH:=all
 
 PKG_NAME:=luci-app-tinyportmapper
