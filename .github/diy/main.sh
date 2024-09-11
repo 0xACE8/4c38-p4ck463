@@ -61,7 +61,7 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall passwall1 && m
 
 # push
 #git clone --depth 1 https://github.com/gaoyaxuan/luci-app-pushbot
-#git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
+git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
 #git clone --depth 1 https://github.com/firkerword/openwrt-wrtbwmon wrtbwmon1 && mv -n wrtbwmon1/wrtbwmon  ./; rm -rf wrtbwmon1
 git clone --depth 1 https://github.com/catcat0921/OpenWRT_ipk serverchan1 && mv -n serverchan1/luci-app-serverchan  ./; rm -rf serverchan1
 
