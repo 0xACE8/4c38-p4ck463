@@ -31,7 +31,7 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p
 #git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/applications/luci-app-mwan3 ./; rm -rf xwrt
 
 # other
-git clone --depth 1 https://github.com/lisaac/luci-app-diskman diskm && mv -n diskm/applications/luci-app-diskman ./; rm -rf diskm
+#git clone --depth 1 https://github.com/lisaac/luci-app-diskman diskm && mv -n diskm/applications/luci-app-diskman ./; rm -rf diskm
 #git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
 git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
