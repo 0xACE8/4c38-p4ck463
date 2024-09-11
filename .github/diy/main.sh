@@ -20,7 +20,7 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udp2raw && mvdir 0p3nwrt-u
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udpspeeder && mvdir 0p3nwrt-udpspeeder
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kcptun
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt-tailscale
-git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan sync && mv -n sync/luci-app-syncdial ./; rm -rf sync
+#git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan sync && mv -n sync/luci-app-syncdial ./; rm -rf sync
 #git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan && mvdir 0p3nwrt-syncmwan
 git clone --depth 1 branch=v2 https://github.com/0xACE8/0p3nwrt-natter && mvdir 0p3nwrt-natter
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyfecvpn && mvdir 0p3nwrt-tinyfecvpn
