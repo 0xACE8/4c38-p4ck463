@@ -1,7 +1,7 @@
 {
 	"admin/services/wechatpush": {
 		"title": "WeChat push",
-		"order": 30,
+		"order": 60,
 		"action": {
 			"type": "firstchild"
 		},
