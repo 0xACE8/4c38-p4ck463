@@ -1,7 +1,7 @@
 {
 	"admin/services/tailscale": {
 		"title": "Tailscale",
-		"order": 80,
+		"order": 90,
 		"action": {
 			"type": "firstchild"
 		},
