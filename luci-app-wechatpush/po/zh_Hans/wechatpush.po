@@ -10,7 +10,7 @@ msgstr ""
 
 #: applications/luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json:3
 msgid "WeChat push"
-msgstr "微信推送"
+msgstr "TG Push"
 
 #: applications/luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json:15
 msgid "Basic Settings"
@@ -86,11 +86,11 @@ msgstr "企业微信应用消息 纯文字版，无需点击标题查看内容�
 
 #: applications/luci-app-wechatpush/htdocs/luci-static/resources/view/wechatpush/config.js:142
 msgid "Another channel for WeChat push, the configuration is relatively simple, and only supports official accounts"
-msgstr "微信推送的另一个通道，配置较简单，只支持公众号"
+msgstr "TG Push的另一个通道，配置较简单，只支持公众号"
 
 #: applications/luci-app-wechatpush/htdocs/luci-static/resources/view/wechatpush/config.js:144
 msgid "Another channel for WeChat push, the configuration is relatively simple, and it supports multiple push methods"
-msgstr "微信推送的另一个通道，配置较简单，支持多项推送方式"
+msgstr "TG Push的另一个通道，配置较简单，支持多项推送方式"
 
 #: applications/luci-app-wechatpush/htdocs/luci-static/resources/view/wechatpush/config.js:146
 msgid "Telegram Bot Push"
