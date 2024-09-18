@@ -31,10 +31,11 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p
 #git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/applications/luci-app-mwan3 ./; rm -rf xwrt
 
 # other
+#git clone --depth 1 https://github.com/EasyTier/luci-app-easytier
 #git clone --depth 1 https://github.com/lisaac/luci-app-diskman diskm && mv -n diskm/applications/luci-app-diskman ./; rm -rf diskm
 #git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
-git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
+#git clone --depth 1 https://github.com/sirpdboy/netspeedtest speedtest && mv -f speedtest/*/ ./ && rm -rf speedtest
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-partexp
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced && mvdir luci-app-advanced
 
@@ -61,9 +62,9 @@ git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall passwall1 && m
 
 # push
 #git clone --depth 1 https://github.com/gaoyaxuan/luci-app-pushbot
-git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
+#git clone --depth 1 https://github.com/tty228/luci-app-wechatpush
 #git clone --depth 1 https://github.com/firkerword/openwrt-wrtbwmon wrtbwmon1 && mv -n wrtbwmon1/wrtbwmon  ./; rm -rf wrtbwmon1
-git clone --depth 1 https://github.com/catcat0921/OpenWRT_ipk serverchan1 && mv -n serverchan1/luci-app-serverchan  ./; rm -rf serverchan1
+#git clone --depth 1 https://github.com/catcat0921/OpenWRT_ipk serverchan1 && mv -n serverchan1/luci-app-serverchan  ./; rm -rf serverchan1
 
 # network
 #git clone --depth 1 https://github.com/gdy666/luci-app-lucky lucky1 && mv -n lucky1/*lucky ./; rm -rf lucky1
