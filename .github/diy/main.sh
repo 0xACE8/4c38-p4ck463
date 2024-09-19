@@ -73,7 +73,7 @@ git clone --depth 1 https://github.com/awe1p/stun
 #git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 # patch
-sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g luci-app-easytier/Makefile
+sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g' luci-app-easytier/Makefile
 sed -i 's/微信推送/TG Push/g' luci-app-wechatpush/po/zh_Hans/wechatpush.po
 sed -i '4d' luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json
 sed -i '4 i\\t\t"order": 60,' luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json
