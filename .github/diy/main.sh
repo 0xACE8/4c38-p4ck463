@@ -32,6 +32,7 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p
 
 # other
 git clone --depth 1 https://github.com/EasyTier/luci-app-easytier
+git clone --depth 1 https://github.com/cddcx/luci-lib-fs
 #git clone --depth 1 https://github.com/lisaac/luci-app-diskman diskm && mv -n diskm/applications/luci-app-diskman ./; rm -rf diskm
 #git clone --depth 1 https://github.com/gSpotx2f/luci-app-cpu-perf
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset
@@ -72,6 +73,7 @@ git clone --depth 1 https://github.com/awe1p/stun
 #git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 # patch
+sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g luci-app-easytier/Makefile
 sed -i 's/微信推送/TG Push/g' luci-app-wechatpush/po/zh_Hans/wechatpush.po
 sed -i '4d' luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json
 sed -i '4 i\\t\t"order": 60,' luci-app-wechatpush/root/usr/share/luci/menu.d/luci-app-wechatpush.json
