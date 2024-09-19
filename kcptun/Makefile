@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019-2020 Xingwang Liao
+# Copyright (C) 2019-2024 0xACE7
 #
 # This is free software, licensed under the GNU General Public License v2.
 # See /LICENSE for more information.
@@ -8,12 +8,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kcptun
-PKG_VERSION:=20240831
+PKG_VERSION:=20240919
 PKG_RELEASE:=$(AUTORELEASE)
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/xtaci/kcptun/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=469177fca95df495b3dc20c62995bc2deb4d33e5c922b2605c87dcf7e46f641a
+PKG_HASH:=80c2dfe277196e5aac19272f30d83b588f57f6e180b22c5865b7864080cfed09
 
 
 PKG_LICENSE:=MIT
