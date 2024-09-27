@@ -74,6 +74,7 @@ git clone --depth 1 https://github.com/awe1p/stun
 #git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 # patch
+sed -i 's\../../\$(TOPDIR)/feeds/packages\g' dnscrypt-proxy2/Makefile
 sed -i 's/vpn/services/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/, 46)/, 90)/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g' luci-app-easytier/Makefile
