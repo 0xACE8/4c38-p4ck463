@@ -27,7 +27,7 @@ PKG_BUILD_FLAGS:=no-mips16
 GO_PKG:=github.c$(TOPDIR)/feeds/packagesSCry$(TOPDIR)/feeds/packagesscrypt-proxy
 
 include $(INCLUDE_DI$(TOPDIR)/feeds/packagesckage.mk
-include $(TOPDIR)/feeds/packages/la$(TOPDIR)/feeds/packagesla$(TOPDIR)/feeds/packageslang-package.mk
+include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
 GO_MOD_ARGS:=
 GO_PKG_BUILD_VARS+= GO111MODULE=off
