@@ -75,7 +75,7 @@ git clone --depth 1 https://github.com/awe1p/stun
 
 # patch
 sed -i 's\../../\$(TOPDIR)/feeds/packages/\g' dnscrypt-proxy2/Makefile
-sed -i "59 i/\tsed -i 's/ipv6_servers = false/ipv6_servers = true/g'" dnscrypt-proxy2/Makefile
+sed -i "59 i\tsed -i 's/ipv6_servers = false/ipv6_servers = true/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml" dnscrypt-proxy2/Makefile
 sed -i 's/vpn/services/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/, 46)/, 90)/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g' luci-app-easytier/Makefile
