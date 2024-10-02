@@ -55,18 +55,7 @@ define Package/dnscrypt-proxy2/install
 	$(INSTALL_BIN) ./files/dnscrypt-proxy.init $(1)/etc/init.d/dnscrypt-proxy
 
 	sed -i "s/^listen_addresses = .*/listen_addresses = ['127.0.0.53:53']/" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i "s/# blocked_names_file = 'blocked-names.txt'/blocked_names_file = 'blocked-names.txt'/g" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/ipv6_servers = false/ipv6_servers = true/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/odoh_servers = false/odoh_servers = true/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/http3 = false/http3 = true/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/cache_size = 4096/cache_size = 8192/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/127.0.0.1:9050/127.0.0.1:1070/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/# proxy/proxy/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/127.0.0.1:8888/127.0.0.1:1071/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/# http_proxy/http_proxy/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i "s/'9.9.9.11:53', '8.8.8.8:53'/'8.8.8.8:53', '94.140.14.14:53', '46.250.226.242:53'/g" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/netprobe_timeout = 60/netprobe_timeout = -1/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
-	sed -i 's/9.9.9.9/8.8.8.8/g' $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
+	sed -i "s/^  # blocked_names_file = 'blocked-names.txt'/blocked_names_file = 'blocked-names.txt'/" $(1)/etc/dnscrypt-proxy2/dnscrypt-proxy.toml
 endef
 
 define Package/dnscrypt-proxy2/description
