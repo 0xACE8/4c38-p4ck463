@@ -50,7 +50,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 #git clone --depth 1 https://github.com/gngpp/luci-app-design-config
 
 # dns
-git clone --depth 1 https://github.com/immortalwrt/packages impack && mv -n impack/net/dnscrypt-proxy2 ./; rm -rf impack
+#git clone --depth 1 https://github.com/immortalwrt/packages impack && mv -n impack/net/dnscrypt-proxy2 ./; rm -rf impack
 git clone --depth 1 https://github.com/sbwml/luci-app-mosdns openwrt-mos && mv -n openwrt-mos/{*mosdns,v2dat} ./; rm -rf openwrt-mos
 git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go ddnsgo && mv -n ddnsgo/*/ ./; rm -rf ddnsgo
 
