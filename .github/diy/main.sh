@@ -20,7 +20,7 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udp2raw && mvdir 0p3nwrt-u
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-udpspeeder && mvdir 0p3nwrt-udpspeeder
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-kcptun && mvdir 0p3nwrt-kcptun
 git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tailscale && mvdir 0p3nwrt-tailscale
-git clone --depth 1 https://github.com/0xACE8/0p3nwrt-dnscrypt-proxy2 && mvdir 0p3nwrt-dnscrypt-proxy2
+#git clone --depth 1 https://github.com/0xACE8/0p3nwrt-dnscrypt-proxy2 && mvdir 0p3nwrt-dnscrypt-proxy2
 #git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan sync && mv -n sync/luci-app-syncdial ./; rm -rf sync
 #git clone --depth 1 https://github.com/0xACE8/0p3nwrt-syncmwan && mvdir 0p3nwrt-syncmwan
 git clone --depth 1 branch=v2 https://github.com/0xACE8/0p3nwrt-natter && mvdir 0p3nwrt-natter
@@ -75,7 +75,7 @@ git clone --depth 1 https://github.com/awe1p/stun
 #git clone --depth 1 https://github.com/muink/openwrt-go-stun
 
 # patch
-#sed -i 's\../../\$(TOPDIR)/feeds/packages/\g' dnscrypt-proxy2/Makefile
+sed -i 's\../../\$(TOPDIR)/feeds/packages/\g' dnscrypt-proxy2/Makefile
 sed -i 's/vpn/services/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/, 46)/, 90)/g' luci-app-easytier/luasrc/controller/easytier.lua
 sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g' luci-app-easytier/Makefile
