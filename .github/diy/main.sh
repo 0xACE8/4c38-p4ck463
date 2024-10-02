@@ -85,8 +85,8 @@ sed -i 's/LUCI_DEPENDS:=/LUCI_DEPENDS:=+kmod-tun +luci-lib-fs/g' luci-app-easyti
 sed -i 's/, 30)/, 60)/g' luci-theme-serverchan/luasrc/controller/serverchan.lua
 #sed -i "/minisign:minisign/d" luci-app-dnscrypt-proxy2/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
-#sed -i "s/), 0)/), -1)/g" luci-app-passwall2/luasrc/controller/passwall2.lua
-#sed -i "s/nil, 0)/nil, -1)/g" luci-app-passwall2/luasrc/controller/passwall2.lua
+sed -i "s/), 0)/), -1)/g" luci-app-passwall2/luasrc/controller/passwall2.lua
+sed -i "s/nil, 0)/nil, -1)/g" luci-app-passwall2/luasrc/controller/passwall2.lua
 #sed -i 's/\(+luci-compat\)/\1 +luci-theme-design/' luci-app-design-config/Makefile
 #sed -i 's/\(+luci-compat\)/\1 +luci-theme-argone/' luci-app-argone-config/Makefile
 
