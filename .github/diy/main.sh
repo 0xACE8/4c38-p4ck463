@@ -30,6 +30,9 @@ git clone --depth 1 https://github.com/0xACE8/0p3nwrt-tinyportmapper && mvdir 0p
 # syncdial & mwan3
 #git clone --depth 1 https://github.com/kiddin9/openwrt-packages kid && mv -n kid/luci-app-syncdial ./; rm -rf kid
 #git clone --depth 1 https://github.com/x-wrt/luci xwrt && mv -n xwrt/applications/luci-app-mwan3 ./; rm -rf xwrt
+git clone --depth 1 branch=master https://github.com/immortalwrt/packages mwan && mv -n mwan/net/mwan3 ./; rm -rf mwan
+git clone --depth 1 branch=master https://github.com/immortalwrt/luci lmwan && mv -n lmwan/applications/luci-app-mwan3 ./; rm -rf lmwan
+git clone --depth 1 branch=master https://github.com/immortalwrt/luci lsd && mv -n lsd/applications/luci-app-syncdial ./; rm -rf lsd
 
 # other
 git clone --depth 1 https://github.com/EasyTier/luci-app-easytier
