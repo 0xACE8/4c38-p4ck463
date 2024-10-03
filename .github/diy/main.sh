@@ -48,6 +48,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 #git clone --depth 1 https://github.com/kenzok78/luci-app-argone-config
 #git clone --depth 1 https://github.com/gngpp/luci-theme-design
 #git clone --depth 1 https://github.com/gngpp/luci-app-design-config
+git clone --depth 1 branch=master https://github.com/immortalwrt/packages lol && mv -n lol/utils/lolcat ./; rm -rf lol
 
 # dns
 git clone --depth 1 https://github.com/immortalwrt/packages impack && mv -n impack/net/dnscrypt-proxy2 ./; rm -rf impack
